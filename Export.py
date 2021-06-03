@@ -1,0 +1,6 @@
+disk = open(r"\\.\E:",'rb')
+disk.seek(0)
+rawData = disk.read(16777216).hex(sep=' ', bytes_per_sep=1)
+text_file = open("Output.txt", "w")
+text_file.write(rawData)
+text_file.close()
